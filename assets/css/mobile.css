@@ -13,7 +13,7 @@ header {
     position: absolute;
     justify-content: space-around;
     background-color: #E0E0E0;
-    width: 56vh;
+    width: 100vw;
     height: 10vh;
 }
 
@@ -46,11 +46,12 @@ header {
 .hamburguer {
     display: flex;
     cursor: pointer;
-    position: relative;
+    position: fixed;
     display: block;
     height: 07px;
     width: 25px;
-    top: 7vw;
+    top: 26px;
+    right: 10px;
 }
 
 .hamburguer span {
@@ -83,7 +84,7 @@ header {
 .conteudo-menu {
     display: flex;
     flex-direction: column;
-    left: 7em;
+    left: 5em;
     width: 76vw;
     height: 90vh;
     position: absolute;
@@ -108,9 +109,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 87%;
+    width: 93%;
     height: 10vw;
-    padding-right: 2em;
+    padding-right: 1em;
 }
 
 .conteudo-menu a:hover , a:focus{
