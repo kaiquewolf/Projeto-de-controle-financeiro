@@ -1,0 +1,266 @@
+/* Definindo fonte e tamanho máximo do corpo*/
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.body {
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-left: 8.5em;
+}
+
+.form {
+    display: inline-block;
+}
+
+.form {
+    margin-right: 5em;
+    width: 400px;
+    height: 344px;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-color: #979797;
+    border-radius: 4px;
+    padding: 19px;
+}
+
+.titulo-form {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.tp-transacao {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.nome {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    margin-top: 6px;
+    border: 1px solid #979797;
+    background: #FFFFFF;
+}
+
+.nome {
+    margin-top: 2%;
+}
+
+.adc-transacao-btn {
+    background: #333333;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+    width: 100%;
+    margin-top: 27px;
+    padding: 1px;
+}
+
+.checkbox-menu {
+    display: none;
+
+}
+
+
+/* Estilizando tabela */
+
+#mercadoria {
+    text-align: start;
+}
+
+table {
+    border-collapse: collapse;
+    width: 514px;
+    height: 196px;
+    left: 440px;
+    top: 130px;
+}
+
+.titulo-tabela {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.subtitulo-tabela {
+    text-align: justify;
+}
+
+
+.lucro-preju {
+    font-size: 10px
+}
+
+.mercadoria,
+.valor-mercadoria {
+    border-bottom: solid;
+    border-bottom-width: 0.1px;
+    border-bottom-color: rgb(151, 151, 151);
+
+}
+
+.border-double {
+    border-bottom: double;
+    border-bottom-color: rgb(151, 151, 151);
+}
+
+.total {
+    font-weight: bold;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .logotipo {
+        margin-left: 21px;
+    }
+
+    .menu {
+        position: relative;
+        right: 19px;
+        background: none;
+        width: 4em;
+    }
+
+    .form {
+        position: absolute;
+        width: 47rem;
+        height: 14em;
+        margin-right: 9rem;
+    }
+
+    .table {
+        width: 99vw;
+    }
+
+    .tabela {
+        position: absolute;
+        top: 26em;
+        right: 0;
+    }
+
+    #nome-mercadoria {
+        position: relative;
+        left: 15em;
+        bottom: 74px;
+    }
+
+    .tp-transacao {
+        display: flex;
+    }
+
+    .input {
+        width: 27%;
+    }
+
+    #valor {
+        position: relative;
+        bottom: 9rem;
+        left: 36rem;
+        width: 31em;
+    }
+
+    #nm-merca {
+        width: 39%;
+    }
+
+    .adc-transacao-btn {
+        position: relative;
+        width: 25%;
+        bottom: 18vw;
+        left: 36em;
+    }
+
+    /* Criando menu hamburguer */
+
+    .checkbox-menu {
+        display: block;
+    }
+
+
+    .checkbox-menu {
+        position: absolute;
+        top: 12px;
+    }
+
+
+
+    .conteudo-menu {
+        display: none;
+    }
+
+
+    #menu-checkbox {
+        position: absolute;
+        opacity: 0;
+        width: 35px;
+        height: 30px;
+        top: -4px;
+        right: -6px;
+    }
+
+    .hamburguer {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 07px;
+        width: 25px;
+    }
+
+    .hamburguer span {
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 100%;
+        border-radius: 30px;
+        background: #333333;
+        transition: 0.25 ease-in-out;
+    }
+
+    .hamburguer span:nth-child(1) {
+        top: 0px;
+    }
+
+    .hamburguer span:nth-child(2) {
+        top: 8px;
+    }
+
+    .hamburguer span:nth-child(3) {
+        top: 16px;
+    }
+   
+    #ocutarmenu{
+        position: absolute;
+        right: 10vw;
+    }
+}

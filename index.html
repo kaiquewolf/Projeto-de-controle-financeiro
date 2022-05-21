@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Individual</title>
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+    <script src="./assets/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logotipo">
+            <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.4783 25.3684C26.2792 25.3684 27.7391 23.8957 27.7391 22.0789C27.7391 20.2622 26.2792 18.7895 24.4783 18.7895C22.6773 18.7895 21.2174 20.2622 21.2174 22.0789C21.2174 23.8957 22.6773 25.3684 24.4783 25.3684ZM24.4783 25.3684C21.5968 25.3684 19.2609 27.7248 19.2609 30.6316H29.6957C29.6957 27.7248 27.3597 25.3684 24.4783 25.3684ZM12.7391 8.92105C12.7391 12.1912 10.1112 14.8421 6.86957 14.8421C3.62789 14.8421 1 12.1912 1 8.92105C1 5.65095 3.62789 3 6.86957 3C10.1112 3 12.7391 5.65095 12.7391 8.92105ZM1 18.7895H12.7391V30.6316H1V18.7895ZM24.4783 3L31 14.8421H17.9565L24.4783 3Z" stroke="#333333" stroke-width="2" stroke-linecap="square"/>
+            </svg>
+            
+        </div>
+        <span class="titulo-header">Controle financeiro</span>
+        </div>
+        <div class="conteudo-menu" id="conteudo-menu">
+            <svg onclick="ocutarMenu()" id="ocutarmenu" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M15.2929 13.0369C15.6834 13.4274 15.6834 14.0606 15.2929 14.4511L14.4511 15.2929C14.0606 15.6834 13.4274 15.6834 13.0369 15.2929L8 10.256L2.96311 15.2929C2.57258 15.6834 1.93942 15.6834 1.54889 15.2929L0.707106 14.4511C0.316582 14.0606 0.316582 13.4274 0.707107 13.0369L5.744 8L0.707107 2.96311C0.316582 2.57258 0.316582 1.93942 0.707107 1.54889L1.54889 0.707106C1.93942 0.316582 2.57258 0.316582 2.96311 0.707107L8 5.744L13.0369 0.707107C13.4274 0.316582 14.0606 0.316582 14.4511 0.707107L15.2929 1.54889C15.6834 1.93942 15.6834 2.57258 15.2929 2.96311L10.256 8L15.2929 13.0369Z"
+                    fill="white" />
+                </svg>
+                <nav>
+                    <a href="#" class="btn-limpar">Limpar dados</a>
+                    <a href="#">Cadastro de transações</a>
+                    
+                    
+                </nav>
+            </div>
+            <div class="menu">
+    
+                    <label for="check-menu" class="hamburguer" onclick="exibirMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+            </div>
+    </header>
+
+    <div class="body">
+        <form action="" class="form">
+            <label for="tipo-de-transacao" class="tp-transacao">Tipo de transação</label>
+            <select name="nova-transacao" class="input" id="nova-transacao">
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+            </select>
+            <div id="nome-mercadoria">
+                <span class="nome">Nome da mercadoria</span>
+                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" placeholder="input">
+            </div>
+            <div id="valor">
+                <span class="nome"> Valor </span>
+                <input type="text" class="input" name="valor" placeholder="R$ 0,00">
+            </div>
+
+            <button class="adc-transacao-btn">Adicionar transação</button>
+
+        </form>
+        <div class="tabela">
+            <h4 class="titulo-tabela">Extrato de transações</h4>
+            <table class="table" cellspacing="10px">
+                <thead class="cabecalho-tabela">
+                    <tr id="tbl-cabecalho">
+                        <th >Mercadoria</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="mercadoria"> + Lorem ipsum dolor sit amet <br> consectetur</td>
+
+                        <td class="valor-mercadoria">R$ 12.999,99</td>
+                    </tr>
+                    <tr>
+                        <td class="mercadoria">Quis nostrud exercitation</td>
+
+                        <td class="valor-mercadoria">R$ 99,99</td>
+                    </tr>
+                    <tr class="border-double">
+                        <td class="" id="doble-border">Lorem ipsum </td>
+                        <td class="" id="doble-border">R$ 9,99</td>
+                    </tr>
+                    <tr class="total">
+                        <td id="total">Total</td>
+                        <td id="total">R$ 12.909,99 <br> <span class="lucro-preju">[LUCRO]</span></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
