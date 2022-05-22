@@ -22,7 +22,7 @@
 
     .form {
         position: relative;
-        bottom: 10vw;
+        bottom: 8vh;
         flex-direction: initial;
         justify-content: center;
         align-items: center;
@@ -45,7 +45,7 @@
 
     .adc-transacao-btn {
         position: absolute;
-        top: 15vh;
+        top: 11em;
         left: 66vw;
         width: 29vw;
         margin-top: auto;
