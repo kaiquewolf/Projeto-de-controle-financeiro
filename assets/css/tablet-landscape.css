@@ -1,0 +1,149 @@
+@media (min-width:1024px) {
+    header {
+        justify-content: flex-start;
+        width: 100%;
+        height: 11vh;
+        display: flex;
+        align-items: center;
+    }
+
+    #ocutarmenu,
+    .menu {
+        display: none;
+    }
+
+    #conteudo-menu {
+        display: flex;
+        background: none;
+    }
+
+    .conteudo-menu {
+        flex-direction: initial;
+        left: initial;
+        width: initial;
+        height: initial;
+        position: initial;
+    }
+
+    nav {
+        display: flex;
+        position: initial;
+        top: initial;
+        flex-direction: initial;
+        align-items: initial;
+        width: initial;
+        height: initial;
+        background: initial;
+        z-index: initial;
+    }
+
+    .conteudo-menu a {
+        color: initial;
+        justify-content: initial;
+        width: initial;
+        height: initial;
+        align-items: initial;
+        display: initial;
+    }
+
+    .btn-limpar {
+        margin: initial;
+        position: initial;
+    }
+
+    .conteudo-menu a:hover {
+        background: initial;
+    }
+
+    /* Começando estilizar*/
+
+    .conteudo-menu {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 25em;
+        width: 23rem;
+        height: 3rem
+    }
+
+    .conteudo-menu a {
+        padding: 10px;
+        font-size: 18px;
+        line-height: 19px;
+        color: #333333;
+    }
+
+    #conteudo-menu {
+        background-color: #FFFFFF;
+    }
+
+    .btn-limpar {
+        border-right: 1px solid #979797;
+    }
+
+    .titulo-header,
+    .logotipo {
+        padding-left: 22px;
+    }
+
+    /* Estilizando form*/
+
+    #nova-transacao,
+    .nome,
+    .input {
+        display: block;
+        width: 24rem;
+        padding: initial;
+        border-radius: 1vh;
+        border-color: #979797;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    .tp-transacao {
+        padding: 1vw;
+    }
+
+    .adc-transacao-btn {
+        width: 25rem;
+        position: relative;
+        bottom: 7px;
+    }
+
+    .form {
+        position: relative;
+        top: 20px;
+        left: 1em;
+        border: 1px solid #979797;
+        width: 26em;
+        height: 24em;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    #nova-transacao {
+        width: 25rem;
+        margin-bottom: 10px;
+    }
+
+    .titulo-form {
+        display: block;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .conteudo-form {
+        position: relative;
+        bottom: 17px;
+    }
+
+    /* Estilizando tabela */
+
+    .tabela {
+        width: 53%;
+        position: relative;
+        bottom: 23em;
+        left: 29em;
+    }
+}
