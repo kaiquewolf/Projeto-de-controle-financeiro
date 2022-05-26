@@ -7,37 +7,37 @@
 body {
     background-color: #FFFFFF;
 }
-    
+
 
 header {
     display: flex;
-    position: absolute;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
     background-color: #E0E0E0;
     width: 100vw;
-    height: 10vh;
+    height: 60px;
+}
+
+img {
+    width: 30px;
+    height: 27.63px;
 }
 
 .body {
-    position: relative;
-    top: 11vh;
+    margin: 0 20px;
+
 }
 
 .logotipo {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    margin-left: 22px;
 }
 
 .titulo-header {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    font: 600;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+    color: #333333;
 }
 
 #conteudo-menu {
@@ -45,24 +45,21 @@ header {
 }
 
 .hamburguer {
-    display: flex;
     cursor: pointer;
-    position: fixed;
     display: block;
-    height: 07px;
-    width: 25px;
-    top: 26px;
-    right: 10px;
+    height: 2px;
+    width: 18px;
+    margin: 24px 0 34px 0;
+    margin-right: 21px;
 }
 
 .hamburguer span {
-    position: absolute;
     display: block;
-    height: 3px;
-    width: 100%;
+    height: 2px;
+    width: 18px;
     border-radius: 30px;
+    margin: 4px 0px 0px;
     background: #333333;
-    transition: 0.25 ease-in-out;
 }
 
 .hamburguer span:nth-child(1) {
@@ -82,26 +79,24 @@ header {
     position: absolute;
 }
 
-.conteudo-menu {
-    display: flex;
-    flex-direction: column;
-    left: 5em;
-    width: 83.3vw;
-    height: 90vh;
-    position: absolute;
-    background-color: #333333;
-}
+
 
 nav {
-    position: absolute;
-    top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    width: 83.3vw;
-    height: 109vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 351px;
+    height: 1000px;
     background-color: #333333;
     z-index: 999;
+}
+
+.btn-limpar {
+    margin: 62px 0 7px 0;
+}
+
+.conteudo-menu {
+    position: absolute;
 }
 
 .conteudo-menu a {
@@ -110,18 +105,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 100%;
-    height: 10vw;
+    padding: 0 20px 0 0;
+    height: 32px;
 }
 
-.conteudo-menu a:hover , a:focus{
+
+.conteudo-menu a:hover,
+a:focus {
     background-color: #C4C4C4;
-}
-
-.btn-limpar{
-    margin-bottom: 6vw;
-    width: 100%;
-    position: relative;
 }
 
 /* Estilo do body*/
@@ -130,17 +121,24 @@ nav {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #979797;
-    padding: 10px 6px 20px;
 }
 
 #nova-transacao,
 .nome,
-.input {
-    display: block;
-    width: 91vw;
-    padding: 2vw;
-    border-radius: 1vh;
+.input,
+.adc-transacao-btn {
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
     border-color: #979797;
+}
+
+.conteudo-form {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
 }
 
 .tp-transacao {
@@ -152,59 +150,75 @@ nav {
     border: 1px solid #979797;
 }
 
-#nova-transacao {
-    border: 1px solid #979797;
-    width: 96vw;
-}
-
 .adc-transacao-btn {
     background-color: #333333;
     color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 96vw;
     margin-top: 15px;
-    height: 3.5vh;
-    font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    border-radius: 1vh;
-    padding: 12px;
+    font-weight: 400;
+    border-radius: 4px;
+    border-bottom: 1px solid #979797;
+    margin-bottom: 29px;
 }
 
 /* Estilo tabela extrato de transações*/
 
-.table {
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 1.5em;
-}
-
-#tbl-cabecalho {
-    display: flex;
-    margin-left: 4vh;
-    margin-right: 10vh;
-    margin-bottom: 10px;
-    justify-content: space-between;
-}
-
 table {
+    margin: 20px 0 30px 0;
     border-collapse: collapse;
-}
-
-tbody{
-    display: table;
+    width: 100%;
+    height: 281px;
+    margin-bottom: 30px;
 }
 
 .titulo-tabela {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    height: 20px;
+    margin: 21px 0 0 0;
+    text-align: center;
 }
+
+#tbl-cabecalho {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid #979797;
+}
+
+.mais-menos {
+    width: 10%;
+}
+
+.mercadoria {
+    width: 70%;
+}
+
+.valor-mercadoria {
+    padding: 7px 0 8px 0;
+    width: 20%;
+}
+
+thead {
+    width: 100%;
+    height: 22px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #000000;
+}
+
+tbody {
+    width: 100%;
+    display: table;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
 
 .cabecalho-tabela {
     border-bottom: 1px solid rgb(151, 151, 151);
@@ -214,23 +228,255 @@ tbody{
     font-size: 10px
 }
 
+.mais-menos,
 .mercadoria,
 .valor-mercadoria {
-    border-bottom: solid;
-    border-bottom-width: 0.1px;
-    border-bottom-color: rgb(151, 151, 151);
+    border-bottom: 1px solid #979797;
 
 }
 
-.border-double {
+.duas-bordas {
     border-bottom: double;
-    border-bottom-color: rgb(151, 151, 151);
+    border-bottom-color: #979797;
 }
 
 .total {
     font-weight: bold;
 }
 
-.titulo-form{
+.titulo-form {
     display: none;
+}
+
+.lucro {
+    width: 98px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 22px;
+    color: #000000;
+}
+
+#total {
+    border: none;
+    padding: 7px 0 0 0;
+
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-bottom: 8px solid #333333;
+}
+
+/* Estilo das medias */
+
+@media (min-width:768px) {
+
+    nav {
+        width: 252px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 189px;
+        border: 1px solid #979797;
+        border-radius: 4px;
+        flex-direction: inherit;
+        margin: 20px 0;
+    }
+
+    .adc-transacao-btn {
+        box-sizing: border-box;
+        width: 200px;
+        height: 32px;
+        margin: 0;
+        position: fixed;
+        top: 216.78px;
+        right: 0;
+        margin-right: 40px;
+    }
+
+    .titulo-form {
+        display: block;
+        position: absolute;
+        top: 100px;
+    }
+
+    .conteudo-form {
+        margin: 21px 20px 20px;
+    }
+
+    .tp-transacao {
+        padding: 0;
+    }
+
+    #nova-transacao,
+    #valor-input {
+        width: 100%;
+    }
+
+    #nome-mercadoria {
+        margin: 0;
+        width: 60%;
+    }
+
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width:768px) and (orientation:landscape) {
+
+    body {
+        max-width: 1112px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    img {
+        width: 40px;
+        height: 36.84px;
+    }
+
+    #titulo-cabecalho {
+        position: fixed;
+        margin: 0 0 0 82px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #conteudo-menu {
+        display: block;
+        position: inherit;
+    }
+
+    #ocutarmenu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 40px;
+        position: inherit;
+        z-index: 0;
+        background-color: #FFFFFF;
+        margin: 20px 20px 20px 0;
+        padding: 4px 20px;
+    }
+
+    .conteudo-menu a {
+        width: initial;
+        display: initial;
+        color: initial;
+        height: 32px;
+        height: initial;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+    }
+
+    #btn-cadastro {
+        padding: 0 0 0 20px;
+    }
+
+    .btn-limpar {
+        margin: initial;
+        border-right: 1px solid #979797;
+    }
+
+    /* Estilo body */
+
+    .form {
+        margin: 26px 0;
+        width: 400px;
+        height: 344px;
+        flex-direction: column;
+        padding: 0 14.09px;
+        justify-content: initial;
+    }
+
+    .conteudo-form {
+        margin: initial;
+    }
+
+    .conteudo-form,
+    #nome-mercadoria {
+        width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+
+    .titulo-form {
+        position: initial;
+        top: initial;
+        margin: 21px 20px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .adc-transacao-btn {
+        position: initial;
+        width: 400px;
+        margin-right: initial;
+    }
+
+    .tabela {
+        width: 652px;
+        height: 281px;
+        margin: 26px 20px;
+    }
+
+    .body {
+        display: flex;
+        justify-content: center;
+    }
+
+    tbody {
+        height: 60%;
+    }
+
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width:1500px) {
+    .body {
+        width: 100%;
+        margin: 0 200px;
+    }
+
+    .logotipo {
+        margin: 0 0 0 200px;
+    }
+
+    .titulo-header {
+        margin-left: 170px;
+    }
+
+    nav {
+        margin-right: 200px;
+    }
 }
