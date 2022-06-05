@@ -60,11 +60,11 @@
             </div>
             <div id="nome-mercadoria" class="conteudo-form">
                 <span class="nome">Nome da mercadoria</span>
-                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria"  onfocus="this.value= ''" required placeholder="input">
+                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" onblur="testaCampo(this.value)" onfocus="this.value= ''" required placeholder="input">
             </div>
             <div id="valor" class="conteudo-form">
                 <span class="nome"> Valor </span>
-                <input type="text" class="input" id="valor-input" name="valor" onfocus="this.value= ''" required placeholder="R$ 0,00">
+                <input type="text" class="input" id="valor-input" name="valor" onblur="testaCampo(this.value)" onfocus="this.value= ''" required placeholder="R$ 0,00">
             </div>
             <div>
                 <button type="submit" class="adc-transacao-btn">Adicionar transação</button>
