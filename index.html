@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Individual</title>
     <link rel="stylesheet" href="./assets/css/mobile.css">
-    <script src="./assets/script.js"></script>
+    <script src="./assets/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
     </header>
 
     <div class="body">
-        <form action="" class="form">
+        <form action="" class="form" onsubmit="testaFormulario(event)" autocomplete="false">
 
             <div class="titulo-form">
                 <h3>Nova Transação</h3>
@@ -60,14 +60,14 @@
             </div>
             <div id="nome-mercadoria" class="conteudo-form">
                 <span class="nome">Nome da mercadoria</span>
-                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" placeholder="input">
+                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" onfocus="this.value= ''" required placeholder="input">
             </div>
             <div id="valor" class="conteudo-form">
                 <span class="nome"> Valor </span>
-                <input type="text" class="input" id="valor-input" name="valor" placeholder="R$ 0,00">
+                <input type="text" class="input" id="valor-input" name="valor" onfocus="this.value= ''" required placeholder="R$ 0,00">
             </div>
             <div>
-                <button class="adc-transacao-btn">Adicionar transação</button>
+                <button type="submit" class="adc-transacao-btn">Adicionar transação</button>
             </div>
             
 
@@ -114,6 +114,9 @@
         </div>
     </div>
     <footer></footer>
+
+    <script src="./assets/js/form.js"></script>
+    
 </body>
 
 </html>
