@@ -64,7 +64,7 @@
             </div>
             <div id="valor" class="conteudo-form">
                 <span class="nome"> Valor </span>
-                <input type="text" class="input" id="valor-input" name="valor" onblur="testaCampo(this.value)" onfocus="this.value= ''" required placeholder="R$ 0,00">
+                <input type="text" class="input" id="valor-input" name="valor" onkeyup="formatarMoeda(this.value)" onblur="testaCampo(this.value)" onfocus="this.value= ''" required placeholder="R$ 0,00">
             </div>
             <div>
                 <button type="submit" class="adc-transacao-btn">Adicionar transação</button>
@@ -85,23 +85,23 @@
                         <td class="mais-menos"> + </td>
                         <td class="mercadoria"> Lorem ipsum dolor sit amet <br> consectetur</td>
 
-                        <td class="valor-mercadoria">R$ 12.999,99</td>
+                        <td class="valor-mercadoria"  >R$ 12.999,99</td>
                     </tr>
                     <tr>
                         <td class="mais-menos"> - </td>
                         <td class="mercadoria">Quis nostrud exercitation</td>
 
-                        <td class="valor-mercadoria">R$ 99,99</td>
+                        <td class="valor-mercadoria" >R$ 99,99</td>
                     </tr>
                     <tr class="duas-bordas">
                         <td class="mais-menos"> + </td>
                         <td class="mercadoria" id="doble-border">Lorem ipsum </td>
-                        <td class="valor-mercadoria" id="doble-border">R$ 9,99</td>
+                        <td class="valor-mercadoria"  id="doble-border">R$ 9,99</td>
                     </tr>
                     <tr class="total">
                         <td></td>
                         <td class="mercadoria" id="total">Total</td>
-                        <td class="valor-mercadoria" id="total">R$ 12.909,99 
+                        <td class="valor-mercadoria"  id="total">R$ 12.909,99 
                     </tr>
                     <tr class="lucro">
                         <td></td>
