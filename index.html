@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Individual</title>
     <link rel="stylesheet" href="./assets/css/mobile.css">
-    <script src="./assets/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -46,7 +45,7 @@
     </header>
 
     <div class="body">
-        <form action="" class="form" onsubmit="testaFormulario(event)">
+        <form  class="form" onsubmit="testaFormulario(event)" onsubmit = "transacao(event)">
 
             <div class="titulo-form">
                 <h3>Nova Transação</h3>
@@ -54,17 +53,17 @@
             <div class="conteudo-form">
                 <label for="tipo-de-transacao" class="tp-transacao">Tipo de transação</label>
                 <select name="nova-transacao" class="input" id="nova-transacao">
-                    <option value="compra">Compra</option>
-                    <option value="venda">Venda</option>
+                    <option value="-">Compra</option>
+                    <option value="+">Venda</option>
                 </select>
             </div>
             <div id="nome-mercadoria" class="conteudo-form">
                 <span class="nome">Nome da mercadoria</span>
-                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" onblur="testaCampo(this.value)" onfocus="this.value= ''" required placeholder="input" autocomplete="false">
+                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" required placeholder="input" autocomplete="off">
             </div>
             <div id="valor" class="conteudo-form">
                 <span class="nome"> Valor </span>
-                <input type="text" class="input" id="valor-input" name="valor" onkeypress="formatarMoeda(event)" onblur="testaCampo(this.value)" onfocus="this.value= ''" required placeholder="R$ 0,00" autocomplete="false">
+                <input type="text" class="input" id="valor-input" name="valor" onkeypress="formatarMoeda(event)" required placeholder="R$ 0,00" autocomplete="off">
             </div>
             <div>
                 <button type="submit" class="adc-transacao-btn">Adicionar transação</button>
@@ -73,7 +72,7 @@
 
         </form>
         <div class="tabela">
-            <table class="table" cellspacing="10px">
+            <table class="table" cellspacing="10px" id="tabela">
                 <h4 class="titulo-tabela">Extrato de transações</h4>
                 <tbody>
                     <tr id="tbl-cabecalho">
@@ -81,41 +80,16 @@
                         <td>Mercadoria</td>
                         <td>Valor</td>
                     </tr>
-                    <tr>
-                        <td class="mais-menos"> + </td>
-                        <td class="mercadoria"> Lorem ipsum dolor sit amet <br> consectetur</td>
 
-                        <td class="valor-mercadoria"  >R$ 12.999,99</td>
-                    </tr>
-                    <tr>
-                        <td class="mais-menos"> - </td>
-                        <td class="mercadoria">Quis nostrud exercitation</td>
-
-                        <td class="valor-mercadoria" >R$ 99,99</td>
-                    </tr>
-                    <tr class="duas-bordas">
-                        <td class="mais-menos"> + </td>
-                        <td class="mercadoria" id="doble-border">Lorem ipsum </td>
-                        <td class="valor-mercadoria"  id="doble-border">R$ 9,99</td>
-                    </tr>
-                    <tr class="total">
-                        <td></td>
-                        <td class="mercadoria" id="total">Total</td>
-                        <td class="valor-mercadoria"  id="total">R$ 12.909,99 
-                    </tr>
-                    <tr class="lucro">
-                        <td></td>
-                        <td></td>
-                        <td>[LUCRO]</td>
-                    </tr>
                 </tbody>
 
             </table>
         </div>
     </div>
     <footer></footer>
-
+    
     <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/script.js"></script>
     
 </body>
 

@@ -1,6 +1,6 @@
 function formatarMoeda(e) {
 
-    e.preventDefault();
+    // e.preventDefault();
     console.log(e)
 
     if ((/[0-9]+/g).test(e.key) && e.target.value.length < 14) {
