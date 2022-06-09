@@ -8,43 +8,48 @@ function ocutarMenu(){
 
 // ---------------------- <--------> --------------------
 
-
+function transacao(e) {
+ console.log(e);
 var tipo = document.getElementById('nova-transacao').value;
 var nome = document.getElementById('nm-merca').value;
 var valor = document.getElementById('valor-input').value;
 
 var transacao = JSON.parse(localStorage.getItem('transacao') || '[]');
 
-transacao.push({
-    tipo: tipo,
-    nome: nome,
-    valor: valor
-});
+transacao.push(
+    {
+        tipo: tipo,
+        nome: nome,
+        valor: valor,
+    }
+);
 
 localStorage.setItem('transacao', JSON.stringify(transacao));
 
-console.log(localStorage.getItem('nome'));
+// document.getElementById('btn-transacao');
+};
 
 console.log(localStorage.getItem('transacao'));
 
-
-// if(transacao != null) {
+function desenhaTabela() {
+    if (transacao != null) {
     
-//         document.querySelector('table.table tbody').innerHTML += 
-//             `<tr>
-//                 <td class="mais-menos">
-//                     ${localStorage.getItem(nome)}
-//                 </td>
-//                 <td class="mercadoria">
-//                     ${transacao.nome}
-//                 </td>
+        document.querySelector('table.table tbody').innerHTML += 
+            `<tr>
+                <td class="mais-menos">
+                    ${transacao.tipo}
+                </td>
+                <td class="mercadoria">
+                    ${localStorage.getItem(nome.value)}
+                </td>
         
-//                 <td class="valor-mercadoria"  >
-//                     ${transacao.valor}
-//                 </td>    
-//             </tr>`
+                <td class="valor-mercadoria"  >
+                    ${localStorage.getItem(valor.value)}
+                </td>    
+            </tr>`
+    }
     
-// }
+};
 
 
 // console.log(document.querySelector('table.table').innerHTML);

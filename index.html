@@ -45,7 +45,7 @@
     </header>
 
     <div class="body">
-        <form  class="form" onsubmit="testaFormulario(event)" onsubmit = "transacao(event)">
+        <form  class="form"  onsubmit = "transacao(event)">
 
             <div class="titulo-form">
                 <h3>Nova Transação</h3>
@@ -74,12 +74,14 @@
         <div class="tabela">
             <table class="table" cellspacing="10px" id="tabela">
                 <h4 class="titulo-tabela">Extrato de transações</h4>
-                <tbody>
+                <thead>
                     <tr id="tbl-cabecalho">
                         <td></td>
                         <td>Mercadoria</td>
                         <td>Valor</td>
                     </tr>
+                </thead>
+                <tbody>
 
                 </tbody>
 
