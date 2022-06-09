@@ -40,11 +40,11 @@ function desenhaTabela() {
                     ${transacao.tipo}
                 </td>
                 <td class="mercadoria">
-                    ${localStorage.getItem(nome.value)}
+                    ${transacao.nome}
                 </td>
         
                 <td class="valor-mercadoria"  >
-                    ${localStorage.getItem(valor.value)}
+                    ${transacao.valor}
                 </td>    
             </tr>`
     }
