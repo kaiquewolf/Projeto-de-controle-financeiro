@@ -28,7 +28,7 @@
                         d="M15.2929 13.0369C15.6834 13.4274 15.6834 14.0606 15.2929 14.4511L14.4511 15.2929C14.0606 15.6834 13.4274 15.6834 13.0369 15.2929L8 10.256L2.96311 15.2929C2.57258 15.6834 1.93942 15.6834 1.54889 15.2929L0.707106 14.4511C0.316582 14.0606 0.316582 13.4274 0.707107 13.0369L5.744 8L0.707107 2.96311C0.316582 2.57258 0.316582 1.93942 0.707107 1.54889L1.54889 0.707106C1.93942 0.316582 2.57258 0.316582 2.96311 0.707107L8 5.744L13.0369 0.707107C13.4274 0.316582 14.0606 0.316582 14.4511 0.707107L15.2929 1.54889C15.6834 1.93942 15.6834 2.57258 15.2929 2.96311L10.256 8L15.2929 13.0369Z"
                         fill="white" />
                 </svg>
-                <a href="#" class="btn-limpar">Limpar dados</a>
+                <a href="#" class="btn-limpar" onclick="limparDados()">Limpar dados</a>
                 <a id="btn-cadastro" href="#">Cadastro de transações</a>
 
 
@@ -51,7 +51,7 @@
                 <h3>Nova Transação</h3>
             </div>
             <div class="conteudo-form">
-                <label for="tipo-de-transacao" class="tp-transacao">Tipo de transação</label>
+                <label for="tipo-de-transacao" class="tp-transacao" required>Tipo de transação</label>
                 <select name="nova-transacao" class="input" id="nova-transacao">
                     <option value="-">Compra</option>
                     <option value="+">Venda</option>
@@ -59,7 +59,7 @@
             </div>
             <div id="nome-mercadoria" class="conteudo-form">
                 <span class="nome">Nome da mercadoria</span>
-                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" required placeholder="input" autocomplete="off">
+                <input type="text" id="nm-merca" class="input" name="nome-da-mercadoria" required placeholder="input" autocomplete="off" onkeypress="validarCampo(event)">
             </div>
             <div id="valor" class="conteudo-form">
                 <span class="nome"> Valor </span>
@@ -74,17 +74,13 @@
         <div class="tabela">
             <table class="table" cellspacing="10px" id="tabela">
                 <h4 class="titulo-tabela">Extrato de transações</h4>
-                <thead>
-                    <tr id="tbl-cabecalho">
-                        <td></td>
-                        <td>Mercadoria</td>
-                        <td>Valor</td>
-                    </tr>
-                </thead>
                 <tbody>
-
+                    <tr id="tbl-cabecalho">
+                        <td style = "width: 10%;"></td>
+                        <td style = "width: 70%;">Mercadoria</td>
+                        <td style = "width: 20%;">Valor</td>
+                    </tr>
                 </tbody>
-
             </table>
         </div>
     </div>

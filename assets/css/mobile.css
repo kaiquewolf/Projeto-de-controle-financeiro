@@ -241,6 +241,8 @@ tbody {
 }
 
 .total {
+    border-top: double;
+    border-color:#979797;
     font-weight: bold;
 }
 
