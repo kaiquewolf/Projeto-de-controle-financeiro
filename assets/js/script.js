@@ -117,9 +117,14 @@ function totalExtrato() {
 // Função pra limpar os dados.
 
 function limparDados() {
+    confirm("Tem certeza que deseja excluir todas as transações?")
     localStorage.removeItem('transacao');
     location.reload();
 };
+
+function cadastraTransacao() {
+    document.getElementById("nova-transacao").focus();
+}
 
 if(extrato == null) {
     tabela.innerHTML += `

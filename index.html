@@ -29,7 +29,7 @@
                         fill="white" />
                 </svg>
                 <a href="#" class="btn-limpar" onclick="limparDados()">Limpar dados</a>
-                <a id="btn-cadastro" href="#">Cadastro de transações</a>
+                <a id="btn-cadastro" href="#" onclick="cadastraTransacao()">Cadastro de transações</a>
 
 
             </nav>
@@ -45,7 +45,7 @@
     </header>
 
     <div class="body">
-        <form  class="form"  onsubmit = "transacao(event)">
+        <form name="formulario" class="form"  onsubmit = "transacao(event)">
 
             <div class="titulo-form">
                 <h3>Nova Transação</h3>

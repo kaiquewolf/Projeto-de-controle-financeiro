@@ -392,6 +392,10 @@ footer {
         color: #333333;
     }
 
+    .conteudo-menu a:hover , a:focus{
+        background-color: initial;
+    }
+
     #btn-cadastro {
         padding: 0 0 0 20px;
     }
