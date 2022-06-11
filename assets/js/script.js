@@ -62,12 +62,6 @@ if(extrato != null) {
     desenhaTabela();
 };
 
-//Método para formatar números de acordo com a localidade
-var formatter = new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-    maximumFractionDigits: 2,
-  })
 
 //Função para somar os valores do input (valor)
 //Mostrar o seu total com o status [LUCRO] ou [PREJUÍZO]
@@ -81,36 +75,34 @@ function totalExtrato() {
     for (i = 0; i < extrato.length; i++) {
         if (extrato[i].tipo === "-") {
             compra = extrato[i].valor.replace(/[R$,. ]/g, '');
-            console.log(compra)
-            compraTotal = Number.parseFloat(compra);
+            compraTotal += Number.parseFloat(compra);
         }
+
 
         if (extrato[i].tipo === "+") {
             venda = extrato[i].valor.replace(/[R$,. ]/g, '');
-            vendaTotal = Number.parseFloat(venda);
+            vendaTotal += Number.parseFloat(venda);
         }
-
     };
+    console.log(compraTotal)
+    console.log(vendaTotal)
     
     total = vendaTotal - compraTotal;
-
     
-    // if (total < 0 ){
-    //     total.toFixed(1);
-    // };
-    console.log(total)
-    // showTotal(total);
+    total = total/100;
+    
+
     if(extrato != null) {
-    //   desenhaTabela();
         document.querySelector("table.table tbody").innerHTML +=
             `<tr class="total">
                 <td></td>
                 <td class="mercadoria" id="total">${'Total'}</td>
-                <td class="valor-mercadoria"  id="total">${new Intl.NumberFormat("pt-BR", {
-                    style: "currency",
-                    currency: "BRL",
-                    maximumFractionDigits: 2,
-                  }).format(total)} 
+                <td class="valor-mercadoria"  id="total">${total.toLocaleString('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL',
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })}
             </tr>
             <tr class="lucro">
                 <td></td>
