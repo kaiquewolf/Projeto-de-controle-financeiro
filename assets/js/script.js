@@ -84,8 +84,6 @@ function totalExtrato() {
             vendaTotal += Number.parseFloat(venda);
         }
     };
-    console.log(compraTotal)
-    console.log(vendaTotal)
     
     total = vendaTotal - compraTotal;
     
