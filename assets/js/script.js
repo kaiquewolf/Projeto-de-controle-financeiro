@@ -1,23 +1,27 @@
+
+// ------------------------------------------- <--------------------> --------------------------
+// Função pra exibir e ocutar o menu lateral em dispositivos mobile
+
 function exibirMenu(){
-    document.getElementById("conteudo-menu").style.display="flex";
-}
-function ocutarMenu(){
-    document.getElementById("conteudo-menu").style.display="none";
+    const menu = document.getElementById("conteudo-menu")
+        if (menu.style.display == 'flex') {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex"
+        }
 }
 
 // -------------------------------- <-------------> ------------------------------------------ //
+// Variáveis que vão guardar a tabela e o conteúdo do Localstorage
 
 var extrato =  JSON.parse(localStorage.getItem('extrato') || '[]');
 
 var tabela = document.querySelector("table.table tbody");
 
+    desenhaTabela();
 
-desenhaTabela();
 // -------------------------------- <-------------> ------------------------------------------ //
 // Função que irá desenhar tabela com os itens do localStorage.
-
-
- 
 
 function desenhaTabela() {
 
@@ -26,16 +30,16 @@ function desenhaTabela() {
         elements.remove()
     })
 
-    if(extrato.length == 0) {
-        tabela.innerHTML += `
-        <tr class="conteudo-dinamico">
-        <td> </td>
-            <td style = "text-align: center;">
-               ${'Nenhuma transação cadastrada !'}
-            </td>
-            <td> </td> 
-        </tr>
-        `
+        if(extrato.length == 0) {
+            tabela.innerHTML += `
+                <tr class="conteudo-dinamico">
+                <td> </td>
+                <td style = "text-align: center; padding-top: 15px">
+                    ${'Nenhuma transação cadastrada !'}
+                </td>
+                <td> </td> 
+                </tr>
+                `
     };
 
     for (mercadoria in extrato){
@@ -54,9 +58,9 @@ function desenhaTabela() {
                     ${extrato[mercadoria].valor}
                 </td>    
             </tr>`
-        }
+    };
         
-        if (extrato.length > 0) {
+    if (extrato.length > 0) {
         var total = 0;
         let compra = [];
         let compraTotal = 0;
@@ -98,9 +102,10 @@ function desenhaTabela() {
                 </tr>`
         };
         
-}
+};
 
-
+// ---------------------------------- <----------------> ---------------------------------
+// Função que adiciona os dados dos inputs no LocalStorage
 
 function transacao(e) {
     e.preventDefault();
@@ -121,25 +126,21 @@ function transacao(e) {
 // Função pra limpar os dados.
 
 function limparDados() {
-    confirm("Tem certeza que deseja excluir todas as transações?")
-    localStorage.removeItem('extrato');
-    location.reload();
+   const confirmarExclusao = confirm("Tem certeza que deseja excluir todas as transações?")
+    if (confirmarExclusao == true && extrato.length > 0) {
+        localStorage.removeItem('extrato');
+        extrato = [];
+        desenhaTabela();
+} else {
+    alert('O extrato de transações ja esta limpo !!')
+}
 };
+
+// Função que da foco no formulário quando clicado no link cadastrar Transações
 
 function cadastraTransacao() {
     document.getElementById("nova-transacao").focus();
 }
 
-// if(extrato == null) {
-//     tabela.innerHTML += `
-//     <tr>
-//     <td> </td>
-//         <td style = "text-align: center;">
-//            ${'Nenhuma transação cadastrada !'}
-//         </td>
-//         <td> </td> 
-//     </tr>
-//     `
-// };
 
 
