@@ -98,7 +98,7 @@ function desenhaTabela() {
                 <tr class="lucro conteudo-dinamico">
                     <td></td>
                     <td></td>
-                    <td>${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
+                    <td>${Math.sign(total) == 0 ? "" : Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
                 </tr>`
         };
         
@@ -119,6 +119,7 @@ function transacao(e) {
         );
 
     localStorage.setItem('extrato', JSON.stringify(extrato));
+    formulario.reset();
     desenhaTabela();
 };
 
@@ -141,6 +142,7 @@ function limparDados() {
 function cadastraTransacao() {
     document.getElementById("nova-transacao").focus();
 }
+
 
 
 

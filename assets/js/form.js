@@ -22,3 +22,13 @@ function formatarMoeda(e) {
     e.target.value = inputFormatado
 }
 
+// -------------------------------- <--------------------> --------------------------
+// Testar campo de valor 
+
+var inputColado = document.getElementById('valor-input');
+inputColado.addEventListener("paste", function(e) {
+    if ([/[^0-9.]/g]) {
+        alert("Este não é um valor válido !!")
+        e.preventDefault()
+    }
+})   
